@@ -1,4 +1,4 @@
-var v1 = new lostlandsAPIv1();
+var v1 = new lostlandsAPI.v1();
 
 $(function() {
     console.log("v1.js loaded");
