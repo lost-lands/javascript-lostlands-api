@@ -1,4 +1,4 @@
-class lostlandsAPIv1 {
+class lostlands_api_v1 {
     constructor(api_url) {
         if (api_url) {
             var url = api_url;
@@ -75,4 +75,8 @@ class lostlandsAPIv1 {
             })
         }
     }
+}
+
+var lostlandsAPI = {
+    v1: lostlands_api_v1
 }
