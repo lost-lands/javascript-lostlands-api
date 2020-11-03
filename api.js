@@ -10,8 +10,21 @@ class lostlandsAPIv1 {
             xhr.open('GET', u + route);
             xhr.responseType = 'json';
             xhr.send();
-            xhr.onload = function() {
-                callback(null, xhr.response)
+
+            xhr.onreadystatechange=function () {
+                if (xhr.readyState == 4 && xhr.status==200){
+                    callback(null, xhr.response)
+                }
+                else {
+                    if(xhr.readyState == 4 && xhr.status == 404) {
+                        console.error('[Lost Lands API] Invalid Request: '+route);
+                        callback(xhr.response)
+                    } else if(xhr.readyState == 4 && xhr.status == 400) {
+                        console.error('[Lost Lands API] Missing Parameters: '+route);
+                        callback(xhr.response)
+                    }
+
+                }
             };
         }
         
