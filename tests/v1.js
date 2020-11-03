@@ -2,7 +2,7 @@ var v1 = new lostlandsAPIv1();
 
 $(function() {
     console.log("v1.js loaded");
-    v1.online('anarchy', function(err, player) {
+    v1.player('DoubleCheck', function(err, player) {
         if (err) {
             console.error(err);
         } else {
