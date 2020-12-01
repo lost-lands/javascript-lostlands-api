@@ -10,4 +10,12 @@ $(function() {
             console.log(player);
         }
     });
+    v1.discordstatus(function(err, player) {
+        if (err) {
+            console.error(err);
+        } else {
+            //player is an array of all documented player data
+            console.log(player);
+        }
+    });
 });

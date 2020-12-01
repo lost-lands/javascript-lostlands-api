@@ -74,6 +74,24 @@ class lostlands_api_v1 {
                 }
             })
         }
+        this.linked = function(id, callback) {
+            this.request('/discord/linked/' + id, function(err, response) {
+                if (err) {
+                    callback(err);
+                } else {
+                    callback(null, response);
+                }
+            })
+        }
+        this.discordstatus = function(callback) {
+            this.request('/discord/status', function(err, response) {
+                if (err) {
+                    callback(err);
+                } else {
+                    callback(null, response);
+                }
+            })
+        }
     }
 }
 
