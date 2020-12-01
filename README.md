@@ -4,7 +4,7 @@
 
 #### Include in your HTML
 ```html
-<script src="https://cdn.jsdelivr.net/gh/lost-lands/javascript-lostlands-api@1.1/api.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lost-lands/javascript-lostlands-api@1.2/api.js"></script>
 ```
 
 #### Initialize the API
